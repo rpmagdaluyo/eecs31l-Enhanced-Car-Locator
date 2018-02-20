@@ -313,7 +313,7 @@ begin
                 R_en <= '1';
                 R_Addr1 <= "100";
                 R_Addr2 <= "100";
-                W_en <= '1' after 22ns;
+                W_en <= '1';
                 W_Addr <= "101";
             
                 ALU_sel <= '1';
@@ -330,7 +330,7 @@ begin
                 R_en <= '1';
                 R_Addr1 <= "001";
                 R_Addr2 <= "101";
-                W_en <= '1' after 22ns;
+                W_en <= '1';
                 W_Addr <= "101";
             
                 ALU_sel <= '1';
@@ -347,7 +347,7 @@ begin
                 R_en <= '1';
                 R_Addr1 <= "000";
                 R_Addr2 <= "101";
-                W_en <= '1' after 22ns;
+                W_en <= '1';
                 W_Addr <= "101";
             
                 ALU_sel <= '0';
@@ -364,7 +364,7 @@ begin
                 R_en <= '1';
                 R_Addr1 <= "010";
                 R_Addr2 <= "100";
-                W_en <= '1' after 22ns;
+                W_en <= '1';
                 W_Addr <= "110";
             
                 ALU_sel <= '1';
@@ -381,7 +381,7 @@ begin
                 R_en <= '1';
                 R_Addr1 <= "101";
                 R_Addr2 <= "110";
-                W_en <= '1' after 22ns;
+                W_en <= '1';
                 W_Addr <= "101";
             
                 ALU_sel <= '0';
@@ -397,7 +397,7 @@ begin
             
                 R_en <= '1';
                 R_Addr1 <= "101";
-                R_Addr2 <= "000";
+                R_Addr2 <= "011";
                 W_en <= '0';
                 W_Addr <= "000";
             
@@ -534,7 +534,6 @@ architecture Struct of lab3s is
 	-- RegFile Outputs
 	signal Reg_Data1: std_logic_vector(15 downto 0);
 	signal Reg_Data2: std_logic_vector(15 downto 0);
-	signal W_Data: std_logic_vector(15 downto 0);
 	
 	-- ALU Output
 	signal ALU_Out: std_logic_vector(15 downto 0);
@@ -559,7 +558,8 @@ begin
 		W_en => W_en,
 		R_Addr1 => R_Addr1,
 		R_Addr2 => R_Addr2,
-		Shifter_sel => Selector_sel,
+		W_Addr => W_Addr,
+		Shifter_sel => Shifter_sel,
         Selector_sel => Selector_sel,
         ALU_sel => ALU_sel,
         OutReg_Ld => OutReg_Ld,
@@ -575,7 +575,7 @@ begin
 		W_en => W_en, 
 		Reg_Data1 => Reg_Data1, 
 		Reg_Data2 => Reg_Data2, 
-		W_Data => W_Data, 
+		W_Data => Selector_Out, 
 		Clk => Clk, 
 		Rst => Rst);
 	ALU_1: ALU port map(
@@ -584,13 +584,13 @@ begin
 		B => Reg_Data2,
 		ALU_Out => ALU_Out);
 	Shifter_1: Shifter port map(
-	    I => ALU_Out,
+	    I => Reg_Data2,
 	    Q => Shifter_Out,
 	    sel => Shifter_sel);
 	Selector_1: Selector port map(
 	    sel => Selector_sel,
-	    x => ALU_Out,
-	    y => Shifter_Out,
+	    x => Shifter_Out,
+	    y => ALU_Out,
 	    f => Selector_Out);
 	OutReg_1: Reg port map(
 	    I => Selector_Out,

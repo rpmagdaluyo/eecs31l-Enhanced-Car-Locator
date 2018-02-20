@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="437000001fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
+      <Cursor1Time time="296000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="150"></NameColumnWidth>
-      <ValueColumnWidth column_width="68"></ValueColumnWidth>
+      <ValueColumnWidth column_width="64"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="13" />
    <wvobject fp_name="/lab3s_tb/Loc" type="array">
       <obj_property name="ElementShortName">Loc[15:0]</obj_property>
       <obj_property name="ObjectShortName">Loc[15:0]</obj_property>
@@ -28,21 +28,9 @@
       <obj_property name="ElementShortName">Done</obj_property>
       <obj_property name="ObjectShortName">Done</obj_property>
    </wvobject>
-   <wvobject fp_name="/lab3s_tb/uut/Controller_1/CurrState" type="other">
-      <obj_property name="ElementShortName">CurrState</obj_property>
-      <obj_property name="ObjectShortName">CurrState</obj_property>
-   </wvobject>
-   <wvobject fp_name="/lab3s_tb/uut/Controller_1/NextState" type="other">
-      <obj_property name="ElementShortName">NextState</obj_property>
-      <obj_property name="ObjectShortName">NextState</obj_property>
-   </wvobject>
    <wvobject fp_name="/lab3s_tb/uut/Start" type="logic">
       <obj_property name="ElementShortName">Start</obj_property>
       <obj_property name="ObjectShortName">Start</obj_property>
-   </wvobject>
-   <wvobject fp_name="/lab3s_tb/uut/Done" type="logic">
-      <obj_property name="ElementShortName">Done</obj_property>
-      <obj_property name="ObjectShortName">Done</obj_property>
    </wvobject>
    <wvobject fp_name="/lab3s_tb/uut/Rst" type="logic">
       <obj_property name="ElementShortName">Rst</obj_property>
@@ -72,10 +60,6 @@
          <obj_property name="ElementShortName">W_en</obj_property>
          <obj_property name="ObjectShortName">W_en</obj_property>
       </wvobject>
-      <wvobject fp_name="/lab3s_tb/uut/W_Data" type="array">
-         <obj_property name="ElementShortName">W_Data[15:0]</obj_property>
-         <obj_property name="ObjectShortName">W_Data[15:0]</obj_property>
-      </wvobject>
       <wvobject fp_name="/lab3s_tb/uut/W_Addr" type="array">
          <obj_property name="ElementShortName">W_Addr[2:0]</obj_property>
          <obj_property name="ObjectShortName">W_Addr[2:0]</obj_property>
@@ -83,10 +67,58 @@
       <wvobject fp_name="/lab3s_tb/uut/Reg_Data1" type="array">
          <obj_property name="ElementShortName">Reg_Data1[15:0]</obj_property>
          <obj_property name="ObjectShortName">Reg_Data1[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/lab3s_tb/uut/Reg_Data2" type="array">
          <obj_property name="ElementShortName">Reg_Data2[15:0]</obj_property>
          <obj_property name="ObjectShortName">Reg_Data2[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/RegFile_1/regArray" type="array">
+         <obj_property name="ElementShortName">regArray[0:7][15:0]</obj_property>
+         <obj_property name="ObjectShortName">regArray[0:7][15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/lab3s_tb/uut/RegFile_1/regArray[0]" type="array">
+            <obj_property name="ElementShortName">[0][15:0]</obj_property>
+            <obj_property name="ObjectShortName">[0][15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/lab3s_tb/uut/RegFile_1/regArray[1]" type="array">
+            <obj_property name="ElementShortName">[1][15:0]</obj_property>
+            <obj_property name="ObjectShortName">[1][15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/lab3s_tb/uut/RegFile_1/regArray[2]" type="array">
+            <obj_property name="ElementShortName">[2][15:0]</obj_property>
+            <obj_property name="ObjectShortName">[2][15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/lab3s_tb/uut/RegFile_1/regArray[3]" type="array">
+            <obj_property name="ElementShortName">[3][15:0]</obj_property>
+            <obj_property name="ObjectShortName">[3][15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/lab3s_tb/uut/RegFile_1/regArray[4]" type="array">
+            <obj_property name="ElementShortName">[4][15:0]</obj_property>
+            <obj_property name="ObjectShortName">[4][15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/lab3s_tb/uut/RegFile_1/regArray[5]" type="array">
+            <obj_property name="ElementShortName">[5][15:0]</obj_property>
+            <obj_property name="ObjectShortName">[5][15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/lab3s_tb/uut/RegFile_1/regArray[6]" type="array">
+            <obj_property name="ElementShortName">[6][15:0]</obj_property>
+            <obj_property name="ObjectShortName">[6][15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/lab3s_tb/uut/RegFile_1/regArray[7]" type="array">
+            <obj_property name="ElementShortName">[7][15:0]</obj_property>
+            <obj_property name="ObjectShortName">[7][15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group42" type="group">
@@ -140,5 +172,13 @@
    <wvobject fp_name="/lab3s_tb/uut/Oe" type="logic">
       <obj_property name="ElementShortName">Oe</obj_property>
       <obj_property name="ObjectShortName">Oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab3s_tb/uut/Controller_1/CurrState" type="other">
+      <obj_property name="ElementShortName">CurrState</obj_property>
+      <obj_property name="ObjectShortName">CurrState</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab3s_tb/uut/Controller_1/NextState" type="other">
+      <obj_property name="ElementShortName">NextState</obj_property>
+      <obj_property name="ObjectShortName">NextState</obj_property>
    </wvobject>
 </wave_config>
