@@ -3,45 +3,142 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="lab3b_tb_behav.wdb" id="1">
+      <db_ref path="lab3s_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="lab3b_tb" />
+            <top_module name="lab3s_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="999998375fs"></ZoomStartTime>
-      <ZoomEndTime time="1000000326fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="437000001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="150"></NameColumnWidth>
-      <ValueColumnWidth column_width="76"></ValueColumnWidth>
+      <ValueColumnWidth column_width="68"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
-   <wvobject fp_name="/lab3b_tb/Start" type="logic">
-      <obj_property name="ElementShortName">Start</obj_property>
-      <obj_property name="ObjectShortName">Start</obj_property>
-   </wvobject>
-   <wvobject fp_name="/lab3b_tb/Clk" type="logic">
-      <obj_property name="ElementShortName">Clk</obj_property>
-      <obj_property name="ObjectShortName">Clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/lab3b_tb/Rst" type="logic">
-      <obj_property name="ElementShortName">Rst</obj_property>
-      <obj_property name="ObjectShortName">Rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/lab3b_tb/Done" type="logic">
-      <obj_property name="ElementShortName">Done</obj_property>
-      <obj_property name="ObjectShortName">Done</obj_property>
-   </wvobject>
-   <wvobject fp_name="/lab3b_tb/Loc" type="array">
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/lab3s_tb/Loc" type="array">
       <obj_property name="ElementShortName">Loc[15:0]</obj_property>
       <obj_property name="ObjectShortName">Loc[15:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/lab3b_tb/Clk_period" type="other">
-      <obj_property name="ElementShortName">Clk_period</obj_property>
-      <obj_property name="ObjectShortName">Clk_period</obj_property>
+   <wvobject fp_name="/lab3s_tb/Done" type="logic">
+      <obj_property name="ElementShortName">Done</obj_property>
+      <obj_property name="ObjectShortName">Done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab3s_tb/uut/Controller_1/CurrState" type="other">
+      <obj_property name="ElementShortName">CurrState</obj_property>
+      <obj_property name="ObjectShortName">CurrState</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab3s_tb/uut/Controller_1/NextState" type="other">
+      <obj_property name="ElementShortName">NextState</obj_property>
+      <obj_property name="ObjectShortName">NextState</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab3s_tb/uut/Start" type="logic">
+      <obj_property name="ElementShortName">Start</obj_property>
+      <obj_property name="ObjectShortName">Start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab3s_tb/uut/Done" type="logic">
+      <obj_property name="ElementShortName">Done</obj_property>
+      <obj_property name="ObjectShortName">Done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab3s_tb/uut/Rst" type="logic">
+      <obj_property name="ElementShortName">Rst</obj_property>
+      <obj_property name="ObjectShortName">Rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab3s_tb/uut/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="group41" type="group">
+      <obj_property name="label">RegFile</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/lab3s_tb/uut/R_en" type="logic">
+         <obj_property name="ElementShortName">R_en</obj_property>
+         <obj_property name="ObjectShortName">R_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/R_Addr1" type="array">
+         <obj_property name="ElementShortName">R_Addr1[2:0]</obj_property>
+         <obj_property name="ObjectShortName">R_Addr1[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/R_Addr2" type="array">
+         <obj_property name="ElementShortName">R_Addr2[2:0]</obj_property>
+         <obj_property name="ObjectShortName">R_Addr2[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/W_en" type="logic">
+         <obj_property name="ElementShortName">W_en</obj_property>
+         <obj_property name="ObjectShortName">W_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/W_Data" type="array">
+         <obj_property name="ElementShortName">W_Data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">W_Data[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/W_Addr" type="array">
+         <obj_property name="ElementShortName">W_Addr[2:0]</obj_property>
+         <obj_property name="ObjectShortName">W_Addr[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/Reg_Data1" type="array">
+         <obj_property name="ElementShortName">Reg_Data1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Reg_Data1[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/Reg_Data2" type="array">
+         <obj_property name="ElementShortName">Reg_Data2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Reg_Data2[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group42" type="group">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/lab3s_tb/uut/ALU_Out" type="array">
+         <obj_property name="ElementShortName">ALU_Out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">ALU_Out[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/ALU_sel" type="logic">
+         <obj_property name="ElementShortName">ALU_sel</obj_property>
+         <obj_property name="ObjectShortName">ALU_sel</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group43" type="group">
+      <obj_property name="label">Shifter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/lab3s_tb/uut/Shifter_sel" type="logic">
+         <obj_property name="ElementShortName">Shifter_sel</obj_property>
+         <obj_property name="ObjectShortName">Shifter_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/Shifter_Out" type="array">
+         <obj_property name="ElementShortName">Shifter_Out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Shifter_Out[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group44" type="group">
+      <obj_property name="label">Selector</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/lab3s_tb/uut/Selector_sel" type="logic">
+         <obj_property name="ElementShortName">Selector_sel</obj_property>
+         <obj_property name="ObjectShortName">Selector_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/Selector_Out" type="array">
+         <obj_property name="ElementShortName">Selector_Out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Selector_Out[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group45" type="group">
+      <obj_property name="label">OutReg</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/lab3s_tb/uut/OutReg_Ld" type="logic">
+         <obj_property name="ElementShortName">OutReg_Ld</obj_property>
+         <obj_property name="ObjectShortName">OutReg_Ld</obj_property>
+      </wvobject>
+      <wvobject fp_name="/lab3s_tb/uut/OutReg_Out" type="array">
+         <obj_property name="ElementShortName">OutReg_Out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">OutReg_Out[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/lab3s_tb/uut/Oe" type="logic">
+      <obj_property name="ElementShortName">Oe</obj_property>
+      <obj_property name="ObjectShortName">Oe</obj_property>
    </wvobject>
 </wave_config>

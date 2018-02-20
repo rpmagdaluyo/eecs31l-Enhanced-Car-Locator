@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Feb 13 09:47:35 2018
+# Process ID: 10208
+# Current directory: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 3 - Enhanced Car Locator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2364 C:\Users\Richard\Documents\UCI\Freshman\2018 Winter\EECS 31L\Labs\Lab 3 - Enhanced Car Locator\Lab 3 - Enhanced Car Locator.xpr
+# Log file: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 3 - Enhanced Car Locator/vivado.log
+# Journal file: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 3 - Enhanced Car Locator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 3 - Enhanced Car Locator/Lab 3 - Enhanced Car Locator.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 3 - Enhanced Car Locator/lab3b_tb_behav.wcfg}
+source lab3b_tb.tcl
+relaunch_sim
+relaunch_sim
+restart
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 3 - Enhanced Car Locator/lab3b_tb_behav.wcfg}
+close_sim

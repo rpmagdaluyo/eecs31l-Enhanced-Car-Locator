@@ -75,7 +75,7 @@ BEGIN
         );
 
    -- Clock process definitions
-   Clk_process :process
+   Clk_process: process
    begin
         Clk <= '0';
         wait for Clk_period/2;
@@ -100,14 +100,17 @@ BEGIN
 		Start <= '0'; -- Tests if CurrState remains at Initial if Start isn't 1.
 		wait for 20ns;
 		
+		Start <= '1'; -- Tests if CurrState goes back to Initial if Rst = 1 in the middle of calculations.
+        wait for 2ns;
+        Rst <= '1';
+        Start <= '0';
+        wait for 20ns;
+        Rst <= '0';
+		
         Start <= '1';
         wait for 12ns;
         assert Loc = X"00C8" report "Loc = 200 fail with test case 0" severity warning;
         wait for 20ns; -- will wait forever
-        
-        Start <= '1'; -- Tests if CurrState goes back to Initial if Rst = 1 in the middle of calculations.
-        wait for 2ns;
-        Rst <= '1';
         wait;
    end process;
 END;

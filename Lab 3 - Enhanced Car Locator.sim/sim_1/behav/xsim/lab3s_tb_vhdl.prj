@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Lab 3 - Enhanced Car Locator.srcs/sources_1/imports/Downloads/lab3s.vhd" \
+"../../../../Lab 3 - Enhanced Car Locator.srcs/sources_1/imports/Downloads/lab3s_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -45,24 +45,34 @@ begin
 
         -- Creates a process sensitive to input and decides on what to output based 
         -- on current state and input
-        CombLogic: process(CurrState)
+        CombLogic: process(CurrState, Rst, Start)
         begin
             case CurrState is    
                 when Initial =>
-                    if (Start = '0') then
+                    Done <= '0';
+                    if (Start = '1') then
+                        NextState <= CalcA;
+                    else
                         NextState <= Initial;
                     end if;
-                    NextState <= CalcA;
                 when CalcA => -- Calculates 1/2at^2
-                      temp <= regArray(4) * regArray(4); -- temp = t^2 (32-bit)
-                      regArray(5) <=  temp(15 downto 0); -- regArray(5) = t^2 (16-bit)
-                      temp <= regArray(5) * regArray(1); -- temp = at^2;
-                      regArray(5) <= temp(15 downto 0); -- regArray(5) = at^2;
-                      NextState <= CalcTot;
+                      if(Rst = '0') then
+                        temp <= regArray(4) * regArray(4); -- temp = t^2 (32-bit)
+                        regArray(5) <=  temp(15 downto 0); -- regArray(5) = t^2 (16-bit)
+                        temp <= regArray(5) * regArray(1); -- temp = at^2;
+                        regArray(5) <= temp(15 downto 0); -- regArray(5) = at^2;
+                        NextState <= CalcTot;
+                      else
+                        NextState <= Initial;
+                      end if;  
                 when CalcTot => -- Calculates the location (1/2at^ + v0t + x0)
-                      temp <= regArray(2)*regArray(4); -- temp is used to store v0t
-                      regArray(6) <= regArray(5) + temp(15 downto 0) + regArray(3);
-                      NextState <= Final;
+                      if(Rst = '0') then
+                        temp <= regArray(2)*regArray(4); -- temp is used to store v0t
+                        regArray(6) <= regArray(5) + temp(15 downto 0) + regArray(3);
+                        NextState <= Final;
+                      else
+                        NextState <= Initial;
+                      end if;
                 when Final => -- Sets Done = 1, Outputs Location;
                       Done <= '1';
                       Loc <= regArray(6);
