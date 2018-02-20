@@ -284,11 +284,11 @@ begin
 	begin
 		case CurrState is
 			when Initial =>
-			    if(Rst = '1') then
-                    NextState <= Initial after 5ns;
-                else
+			    if(Start = '1') then
                     NextState <= CalcA after 5ns;
-                            end if; 
+                else
+                    NextState <= Initial after 5ns;
+                end if; 
 				Done <= '0';
 				
 				R_en <= '1';

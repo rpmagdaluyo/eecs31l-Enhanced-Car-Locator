@@ -102,9 +102,7 @@ BEGIN
 		
 		-- your stimulus here
 		Start <= '1';
-		wait;
-
-        wait; -- will wait forever
+		wait; -- will wait forever
    end process;
 
 END;
