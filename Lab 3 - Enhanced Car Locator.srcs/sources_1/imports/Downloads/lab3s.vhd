@@ -276,7 +276,11 @@ begin
     ControllerStateReg: process(Clk, CurrState)
     begin
 		if(Clk = '1' and Clk'event) then
-            CurrState <= NextState after 5ns;
+            if(Rst = '1') then 
+                CurrState <= Initial;
+		    else
+                CurrState <= NextState after 5ns;
+            end if;
         end if;
     end process;  
         

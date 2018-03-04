@@ -101,8 +101,19 @@ BEGIN
         Rst <= '0';
 		
 		-- your stimulus here
+		-- This block tests if reset works
 		Start <= '1';
-		wait; -- will wait forever
+		wait for 100ns;
+		Rst <= '1';
+		wait for 37ns;
+		
+		-- This block tests if the program runs through the FSMD correctly
+		Rst <= '0';
+		Start <= '1';
+		wait for 260 ns; 
+		assert Loc = X"00C8" report "Loc = 200 fail with test case 1" severity warning;
+		
+		wait;-- will wait forever
    end process;
 
 END;
